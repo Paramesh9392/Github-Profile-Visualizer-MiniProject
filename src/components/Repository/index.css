@@ -1,3 +1,12 @@
+.repos-bg-container {
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  padding: 30px;
+  min-height: 100vh;
+}
 .home-result-container {
   display: flex;
   flex-direction: column;
@@ -64,7 +73,7 @@
   margin-top: 10px;
 }
 .each-repo-container {
-  width: 100%;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;

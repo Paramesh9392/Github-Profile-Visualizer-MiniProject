@@ -12,7 +12,6 @@ const RepositoryCard = props => {
     forksCount,
     owner,
   } = repositoryDetails
-  const {avatarUrl, login} = owner
 
   return (
     <Link to={`/repositories/${name}`}>

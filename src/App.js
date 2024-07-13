@@ -31,7 +31,7 @@ class App extends Component {
       >
         <>
           <Switch>
-            <Route path="/" component={HomeContainer} />
+            <Route exact path="/" component={HomeContainer} />
             <Route
               exact
               path="/repositories"

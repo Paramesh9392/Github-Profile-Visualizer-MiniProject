@@ -32,7 +32,7 @@ class Home extends Component {
     const {username} = this.props
     this.setState({apiStatus: apiStatusConstarints.inProgress})
 
-    const apiUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=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`
+    const apiUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=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`
     const options = {
       method: 'GET',
     }
@@ -76,6 +76,7 @@ class Home extends Component {
       this.setState(prevState => ({
         apiStatus: apiStatusConstarints.success,
         userProfileData: [...prevState.userProfileData, formattedData],
+        wrongUserName: false,
       }))
     } else {
       this.setState({

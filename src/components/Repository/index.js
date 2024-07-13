@@ -57,7 +57,7 @@ class Repository extends Component {
     const {username} = this.props
     this.setState({apiStatus: apiStatusConstarints.inProgress})
 
-    const apiUrl = `https://apis2.ccbp.in/gpv/repos/${username}?api_key=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`
+    const apiUrl = `https://apis2.ccbp.in/gpv/repos/${username}?api_key=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`
     const options = {
       method: 'GET',
     }
@@ -260,7 +260,7 @@ class Repository extends Component {
     return (
       <>
         <Header />
-        <div>
+        <div className="repos-bg-container">
           {username === ''
             ? this.renderNoDataFoundView()
             : this.renderOutPutView()}
