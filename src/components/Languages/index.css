@@ -1,0 +1,44 @@
+.language {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  min-width: 30%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .language {
+    min-width: 10%;
+  }
+}
+
+.style1 {
+  color: #e879f9;
+  background-color: #c026d329;
+}
+
+.style2 {
+  color: #4ade80;
+  background-color: #22c55e29;
+}
+.style3 {
+  color: #38bdf8;
+  background-color: #0284c729;
+}
+.style4 {
+  color: #f472b6;
+  background-color: #db277729;
+}
+.style5 {
+  color: #fbbf24;
+  background-color: #f59e0b29;
+}

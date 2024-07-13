@@ -1,0 +1,40 @@
+.analysis-app-container {
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  padding: 30px;
+  min-height: 100vh;
+}
+.analysisContainer {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.analysis-linechart-container {
+  width: 100%;
+  margin-top: 20px;
+}
+.pie-languages-reposCount-container {
+  width: 50%;
+  margin-top: 15px;
+}
+.pie-heading {
+  font-size: 25px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.pie-languages-commitCount-container {
+  width: 50%;
+  margin-top: 15px;
+}
+.commits-per-repo-container {
+  width: 100%;
+  margin-top: 20px;
+}

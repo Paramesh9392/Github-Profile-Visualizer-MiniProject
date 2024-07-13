@@ -1,0 +1,196 @@
+.home-container {
+  background-color: #0f172a;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1d2537;
+  border-radius: 8px;
+  height: 50px;
+  width: 360px;
+}
+.WrongUserInputClassName {
+  border: 1px solid red;
+  background-color: transparent;
+  font-size: 20px;
+  font-family: 'Roboto';
+  color: #fefafa;
+  padding: 8px;
+  width: 90%;
+  height: 100%;
+  outline: none;
+}
+.UserInputClassName {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-family: 'Roboto';
+  color: #fefafa;
+  width: 90%;
+  height: 100%;
+  padding: 8px;
+  outline: none;
+}
+.search-icon-button {
+  background-color: #4f4e4c;
+  padding: 6px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fefafa;
+  border-radius: 5px;
+  height: 100%;
+  width: 18%;
+}
+.search-icon {
+  width: 24px;
+  height: 24px;
+}
+.errorMsg {
+  font-family: 'Roboto';
+  font-size: 12px;
+  color: rgb(243, 50, 50);
+  margin-top: 0px;
+  margin-right: 180px;
+}
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.heading {
+  font-family: 'Roboto';
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 450;
+  text-align: center;
+}
+.home-img {
+  width: 560px;
+  height: 440px;
+}
+.retry-button {
+  background-color: rgb(13, 107, 214);
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border-radius: 6px;
+  height: 35px;
+  padding: 8px;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  margin-top: 30px;
+  color: #ffffff;
+  width: 100%;
+}
+.avatarUrl {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 10px;
+  border-radius: 100px;
+}
+.profile-name {
+  font-size: 45px;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Bree serif';
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.login {
+  font-size: 23px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 0px;
+}
+.bio {
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+  width: 60%;
+}
+.text {
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+}
+.follow-details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.follows-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.color-heading {
+  font-size: 20px;
+  color: rgb(37, 70, 178);
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.hr-line {
+  border: 1px solid #a0a0a0;
+  height: 60px;
+  margin: 40px;
+}
+.company-details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+}
+.company-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profile-icons {
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+}

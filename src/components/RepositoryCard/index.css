@@ -1,0 +1,50 @@
+.repo-item-container {
+  background-color: #ffffff;
+  opacity: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  font-family: 'Roboto';
+}
+.repo-item-name {
+  color: #3b82f6;
+  font-weight: 500;
+  text-align: left;
+  font-size: 20px;
+}
+.repo-item-description {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.languages-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+.repos-count-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.stargazersCount-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 15px;
+}
+.repos-icon {
+  height: 30px;
+  width: 30px;
+}
+.count {
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-left: 7px;
+}
