@@ -1,3 +1,118 @@
+.repoItemDetailsContainer {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .repoItemDetailsContainer {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+.repositoryItemContainer1 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ffffff0f;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .repositoryItemContainer1 {
+    padding: 20px;
+  }
+}
+.commit-issues-count-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .commit-issues-count-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.repo-item-counts-container {
+  border: 1px solid #cbd5e1;
+  margin-bottom: 15px;
+  width: 150px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .repo-item-counts-container {
+    margin-right: 20px;
+  }
+}
+.repo-item-count-heading {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #ffffff;
+}
+.repo-item-counts {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: #ffffff;
+}
+.contributors-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.contributors-heading {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: #ffffff;
+}
+.contributors-desc {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #cbd5e1;
+}
+.contributors-images-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.pieChart-language-heading {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+  color: #f8fafc;
+}
+
+
+
+
+
+
+/*
 .repositoriesContainer {
   background-color: #0f172a;
   width: 100vw;
@@ -132,3 +247,4 @@ contributors-count-text {
   display: flex;
   justify-content: left;
 }
+*/

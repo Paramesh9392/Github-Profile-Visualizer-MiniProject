@@ -1,21 +1,21 @@
 import {PieChart, Pie, Legend, Cell, ResponsiveContainer} from 'recharts'
 
 const COLORS = [
-  'Pink',
+  '#0088FE',
   '#00C49F',
   '#FFBB28',
-  '#0088FE',
-  '#F2637F',
-  'Orange',
   'purple',
+  'Pink',
+  'Orange',
+  'red',
 ]
 
-const RepoCommitCountPie = props => {
-  const {repoCommitCount} = props
-  const data = repoCommitCount
+const Piechart = props => {
+  const lezend = props
+  const data = lezend.pieLanguages
 
   return (
-    <ResponsiveContainer width="120%" height={200}>
+    <ResponsiveContainer width="80%" height={300}>
       <PieChart>
         <Pie
           cx="50%"
@@ -44,39 +44,38 @@ const RepoCommitCountPie = props => {
     </ResponsiveContainer>
   )
 }
-
-export default RepoCommitCountPie
+export default Piechart
 
 /* import {PieChart, Pie, Legend, Cell, ResponsiveContainer} from 'recharts'
 
 const COLORS = [
-  'Pink',
+  '#0088FE',
   '#00C49F',
   '#FFBB28',
-  '#0088FE',
-  '#F2637F',
-  'Orange',
   'purple',
+  'Pink',
+  'Orange',
+  'red',
 ]
 
-const RepoCommitCountPie = props => {
-  const {repoCommitCountDetails} = props
-  const data = repoCommitCountDetails
+const Piechart = props => {
+  const {pieLanguages} = props
+  const data = pieLanguages
 
   return (
-    <ResponsiveContainer width="120%" height={200}>
+    <ResponsiveContainer width="80%" height={300}>
       <PieChart>
         <Pie
-          cx="50%"
-          cy="50%"
-          data={data}
+          cx="70%"
+          cy="40%"
+          data={pieLanguages}
           startAngle={0}
           endAngle={360}
           innerRadius="40%"
           outerRadius="70%"
           dataKey="value"
         >
-          {data.map((entry, index) => (
+          {pieLanguages.map((entry, index) => (
             <Cell
               key={data.name + data.value}
               fill={COLORS[index % COLORS.length]}
@@ -94,5 +93,5 @@ const RepoCommitCountPie = props => {
   )
 }
 
-export default RepoCommitCountPie
+export default Piechart
 */

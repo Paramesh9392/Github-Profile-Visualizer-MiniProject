@@ -87,6 +87,290 @@
   justify-content: center;
   align-items: flex-start;
 }
+/* .linearChartContainer {
+  width: 100%;
+}
+ */
+@media screen and (min-width: 768px) {
+  .analysis-no-data-img {
+    height: 300px;
+    width: 300px;
+  }
+  .analysis-no-data-heading {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .analysis-no-data-desc {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.AnalysisSuccessViewContainer {
+  min-height: 90vh;
+  width: 100%;
+  padding: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .AnalysisSuccessViewContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.linearChartContainer {
+  width: 100%;
+  background-color: #132240;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .linearChartContainer {
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.langRepoCommitCountContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.pielanguageCountContainer {
+  margin-bottom: 30px;
+}
+.pielCommitanguageCountContainer {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .langRepoCommitCountContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .pielanguageCountContainer {
+    margin-right: 80px;
+  }
+  .pielCommitanguageCountContainer {
+    margin-left: 80px;
+  }
+}
+
+.pieLangCountHeadingRep {
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: #f8fafc;
+  padding-bottom: 20px;
+}
+
+.pieLangCountHeading {
+  font-family: 'Roboto';
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+  color: #f8fafc;
+  padding-bottom: 20px;
+}
+
+.repoCommitDescContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .repoCommitDescContainer {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    /*  margin-left: 100px; */
+  }
+}
+
+.repoCommitContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .repoCommitContainer {
+    width: 40%;
+  }
+}
+
+.repoCommitHeading {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+  color: #f8fafc;
+}
+
+@media screen and (min-width: 768px) {
+  .repoCommitHeading {
+    font-size: 24px;
+    text-align: center;
+    margin-left: 110px;
+    margin-bottom: 20px;
+  }
+}
+
+.list {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #ffffff;
+  list-style-type: square;
+}
+
+@media screen and (min-width: 768px) {
+  .list {
+    padding-top: 80px;
+  }
+}
+
+.analysisHeadingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .analysisHeadingContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.analysis {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+  color: #f8fafc;
+}
+
+/*.analysisContainer {
+  min-height: 90vh;
+  background-color: #0f172a;
+}
+.testcaseContainer {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.analysisTestHeading {
+  font-family: 'Roboto';
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 500;
+  padding-left: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .analysisTestHeading {
+    padding-left: 260px;
+  }
+}
+
+.analysis-loader-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.analysisFailureContainer {
+  padding: 20px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.style {
+  color: white;
+}
+
+.noDataFoundContainer {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.analysis-no-data-img {
+  height: 250px;
+  width: 250px;
+}
+
+.analysis-no-data-heading {
+  font-family: 'Roboto';
+  font-size: 20px;
+  line-height: 32px;
+  color: #f8fafc;
+}
+
+.analysis-no-data-desc {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 18.24px;
+  text-align: center;
+  color: #f8fafc;
+}
+
+.goto-home-button {
+  height: 35px;
+  width: 100px;
+  background-color: #f8fafc;
+  border: none;
+  font-family: 'Roboto';
+  cursor: pointer;
+}
+
+.analysisSuccessContainer {
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
 @media screen and (min-width: 768px) {
   .analysis-no-data-img {
     height: 300px;
@@ -275,3 +559,4 @@
   text-align: left;
   color: #f8fafc;
 }
+*/

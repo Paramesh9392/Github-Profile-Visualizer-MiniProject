@@ -1,4 +1,4 @@
-import UsernameContext from '../../Context/UsernameContext'
+import UsernameContext from '../../context/UsernameContext'
 import Analysis from '../Analysis'
 
 const AnalysisContainer = () => (
@@ -10,3 +10,17 @@ const AnalysisContainer = () => (
   </UsernameContext.Consumer>
 )
 export default AnalysisContainer
+
+/* import UsernameContext from '../../Context/UsernameContext'
+import Analysis from '../Analysis'
+
+const AnalysisContainer = () => (
+  <UsernameContext.Consumer>
+    {value => {
+      const {username} = value
+      return <Analysis username={username} />
+    }}
+  </UsernameContext.Consumer>
+)
+export default AnalysisContainer
+*/

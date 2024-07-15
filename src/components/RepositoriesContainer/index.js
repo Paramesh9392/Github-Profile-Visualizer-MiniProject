@@ -1,4 +1,4 @@
-import UsernameContext from '../../Context/UsernameContext'
+import UsernameContext from '../../context/UsernameContext'
 import Repository from '../Repository'
 
 const RepositoriesContainer = () => (
@@ -10,3 +10,17 @@ const RepositoriesContainer = () => (
   </UsernameContext.Consumer>
 )
 export default RepositoriesContainer
+
+/* import UsernameContext from '../../Context/UsernameContext'
+import Repository from '../Repository'
+
+const RepositoriesContainer = () => (
+  <UsernameContext.Consumer>
+    {value => {
+      const {username} = value
+      return <Repository username={username} />
+    }}
+  </UsernameContext.Consumer>
+)
+export default RepositoriesContainer
+*/

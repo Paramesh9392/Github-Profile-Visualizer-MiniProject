@@ -1,4 +1,31 @@
-.contributors-item {
+.contributors-profile-container {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.contributor-profile {
+  height: 32px;
+  width: 32px;
+  border-radius: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .contributors-profile-container {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .contributor-profile {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+
+
+
+
+
+/*.contributors-item {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10,3 +37,4 @@
   width: 30px;
   border-radius: 50px;
 }
+*/
