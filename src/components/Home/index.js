@@ -32,7 +32,7 @@ class Home extends Component {
     const {username} = this.props
     this.setState({apiStatus: apiStatusConstarints.inProgress})
 
-    const apiUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=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`
+    const apiUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=` // personal access token should be place here
     const options = {
       method: 'GET',
     }
@@ -128,7 +128,6 @@ class Home extends Component {
       name,
       login,
       bio,
-      blog,
       followers,
       following,
       publicRepos,

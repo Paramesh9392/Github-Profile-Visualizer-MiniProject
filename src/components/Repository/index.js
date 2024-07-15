@@ -57,7 +57,7 @@ class Repository extends Component {
     const {username} = this.props
     this.setState({apiStatus: apiStatusConstarints.inProgress})
 
-    const apiUrl = `https://apis2.ccbp.in/gpv/repos/${username}?api_key=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`
+    const apiUrl = `https://apis2.ccbp.in/gpv/repos/${username}?api_key=` // personal access token should be place here
     const options = {
       method: 'GET',
     }
@@ -65,7 +65,6 @@ class Repository extends Component {
     const response = await fetch(apiUrl, options)
     if (response.ok === true) {
       const data = await response.json()
-      console.log(data)
       const formattedData = data.map(eachItem => ({
         allowForking: eachItem.allow_forking,
         archiveUrl: eachItem.archive_url,
@@ -150,7 +149,6 @@ class Repository extends Component {
         watchersCount: eachItem.watchers_count,
         webCommitSignOffRequired: eachItem.web_commit_signoff_required,
       }))
-      console.log(formattedData)
 
       this.setState({
         apiStatus: apiStatusConstarints.success,
@@ -228,9 +226,8 @@ class Repository extends Component {
       />
       <h1 className="no-data-heading">PAGE NOT FOUND</h1>
       <p className="no-data-text">
-        {' '}
-        We're sorry, the page you requested could not be found Please go back to
-        the homepage
+        We are sorry, the page you requested could not be found Please go back
+        to the homepage
       </p>
       <Link to="/">
         <button className="go-to-Home-button" type="button">

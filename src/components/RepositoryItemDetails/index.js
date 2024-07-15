@@ -28,8 +28,9 @@ class RepositoryItemDetails extends Component {
   getRepoItemDetails = async () => {
     const {username, repoName} = this.props
     this.setState({apiStatus: apiStatusConstarints.inProgress})
+    console.log(repoName)
 
-    const apiUrl = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${repoName}?api_key=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`
+    const apiUrl = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${repoName}?api_key=` // personal access token should be place here
     const options = {
       method: 'GET',
     }
@@ -65,7 +66,6 @@ class RepositoryItemDetails extends Component {
           type: contributor.type,
           url: contributor.url,
         })),
-        owner: this.getOwner(data.owner),
         watchersCount: data.watchers_count,
       }
 
@@ -110,9 +110,9 @@ class RepositoryItemDetails extends Component {
       languages,
       forksCount,
       stargazersCount,
-      commitsCount,
       issuesCount,
       contributors,
+      watchersCount,
     } = repositoryItemData
 
     const contributorsLength = contributors.length
@@ -120,7 +120,7 @@ class RepositoryItemDetails extends Component {
     return (
       <div className="repo-eachItem-container">
         <h1 className="repo-color-name">{name}</h1>
-        <p className="text">{description}</p>
+        <p className="description-text">{description}</p>
         <div className="languages-container">
           {languages.map(eachLanguage => (
             <Languages
@@ -133,39 +133,39 @@ class RepositoryItemDetails extends Component {
         <div className="repo-forks-stars-count-container">
           <div className="repos-forks-stars-count">
             <img
-              src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720564077/Group_7500_aeudqb.png"
+              src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720893699/Star_-_16px_fqj2qn.png"
               alt="stargazers_count"
               className="stars-img"
             />
-            <p className="text">{stargazersCount}</p>
+            <p className="forks-text">{stargazersCount}</p>
           </div>
           <div className="repos-forks-stars-count">
             <img
-              src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720564077/Git_3_h8boah.png"
+              src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720893748/Git_3_1_woktbx.png"
               alt="stargazers_count"
               className="stars-img"
             />
-            <p className="text">{forksCount}</p>
+            <p className="forks-text">{forksCount}</p>
           </div>
         </div>
 
         <div className="commits-issues-count-container">
           <div className="commits-issues-count">
-            <p className="commits-text">Commits Count</p>
-            <p className="text">{commitsCount}</p>
+            <p className="commits-text">Watchers Counts</p>
+            <p className="count-text">{watchersCount}</p>
           </div>
 
           <div className="commits-issues-count">
-            <p className="commits-text">Issues Count</p>
-            <p className="text">{issuesCount}</p>
+            <p className="commits-text">Issues Counts</p>
+            <p className="count-text">{issuesCount}</p>
           </div>
         </div>
 
         <div className="contributors-container">
-          <h1 className="text-heading">Contributors :</h1>
-          <p className="count-text">
+          <h1 className="text-heading">Contributors</h1>
+          <p className="contributors-count">
             {contributorsLength}
-            <span>Members</span>
+            <span className="contributors-count-text"> Members</span>
           </p>
           <ul className="contributor-images-container">
             {contributors.map(eachContributor => (
@@ -178,8 +178,10 @@ class RepositoryItemDetails extends Component {
         </div>
 
         <div className="pie-chart-container">
-          <h1 className="text-heading">Languages :</h1>
-          <PieChartRoute pieLanguages={languages} />
+          <h1 className="text-heading">Languages</h1>
+          <div className="pie-container">
+            <PieChartRoute pieLanguages={languages} />
+          </div>
         </div>
       </div>
     )

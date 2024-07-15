@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 .home-img {
   width: 560px;
@@ -65,12 +66,14 @@
 }
 .repos-heading {
   font-family: 'Roboto';
-  font-weight: 600;
+  font-weight: 500;
   color: #ffffff;
-  font-size: 25px;
+  font-size: 30px;
   text-align: left;
   align-self: flex-start;
   margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 8px;
 }
 .each-repo-container {
   width: 90vw;

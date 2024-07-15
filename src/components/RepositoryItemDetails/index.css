@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 45px;
 }
 .repo-eachItem-container {
-  background-color: #0f172a;
+  background-color: #132240;
   width: 90%;
   border-radius: 10px;
   padding: 30px;
@@ -15,14 +15,22 @@
   flex-direction: column;
   justify-content: flex-start;
   font-family: 'Roboto';
+  text-align: left;
+  align-self: flex-start;
 }
 .repo-color-name {
-  font-size: 24px;
+  font-size: 30px;
   color: #3b82f6;
-  font-weight: 600;
+  font-weight: 650;
+}
+.description-text {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 450;
+  text-align: left;
 }
 .text {
-  font-size: 15px;
+  font-size: 17px;
   color: #ffffff;
   font-weight: 400;
 }
@@ -30,12 +38,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .repo-forks-stars-count-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 20px;
 }
 .repos-forks-stars-count {
   display: flex;
@@ -44,15 +53,20 @@
   margin-right: 15px;
 }
 .stars-img {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   margin-right: 6px;
+}
+.forks-text {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 450;
 }
 .commits-issues-count-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .commits-issues-count {
   display: flex;
@@ -61,8 +75,16 @@
   justify-content: center;
   border-radius: 7px;
   border: 1px solid #ffffff;
-  margin-right: 10px;
-  padding: 10px;
+  margin-right: 15px;
+  padding: 8px;
+  text-align: center;
+  height: 70px;
+  width: 200px;
+}
+.commits-text {
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: 450;
   text-align: center;
 }
 .contributors-container {
@@ -70,18 +92,30 @@
   flex-direction: column;
   margin-top: 20px;
 }
-.text-heading {
-  font-size: 25px;
+.contributors-count {
+  font-size: 17px;
   color: #ffffff;
-  font-weight: 500;
-  margin-bottom: 15px;
+  font-weight: 400;
+  margin-right: 10px;
+  padding-right: 8px;
+}
+contributors-count-text {
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: 400;
+}
+.text-heading {
+  font-size: 27px;
+  color: #ffffff;
+  font-weight: 550;
+  margin-bottom: 18px;
 }
 .count-text {
   font-size: 16px;
   color: #ffffffe7;
-  font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 8px;
+  font-weight: 450;
+  text-align: center;
+  margin-top: 5px;
 }
 .contributor-images-container {
   display: flex;
@@ -92,5 +126,9 @@
   margin-top: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
+}
+.pie-container {
+  display: flex;
+  justify-content: left;
 }

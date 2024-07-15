@@ -29,7 +29,7 @@ class Analysis extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=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`
+    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=` // personal access token should be place here
     const options = {
       method: 'GET',
     }
@@ -53,7 +53,6 @@ class Analysis extends Component {
     const {analysisList} = this.state
     const analysisListLength = Object.keys(analysisList).length === 0
     const {
-      user,
       quarterCommitCount,
       langRepoCount,
       langCommitCount,

@@ -4,8 +4,13 @@ import './index.css'
 
 const RepositoryCard = props => {
   const {repositoryDetails} = props
-  const {name, description, languages, stargazersCount, forksCount} =
-    repositoryDetails
+  const {
+    name,
+    description,
+    languages,
+    stargazersCount,
+    forksCount,
+  } = repositoryDetails
 
   return (
     <Link to={`/repositories/${name}`} className="link">
