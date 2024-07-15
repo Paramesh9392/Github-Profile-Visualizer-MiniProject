@@ -39,7 +39,7 @@ class App extends Component {
             />
             <Route
               exact
-              path="/repositories/:repoName"
+              path="/repositories/:id"
               component={RepositoryItemDetailsContainer}
             />
             <Route exact path="/analysis" component={AnalysisContainer} />

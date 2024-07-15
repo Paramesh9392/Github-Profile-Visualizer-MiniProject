@@ -2,6 +2,7 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts'
 
 const LineChartPie = props => {
   const {linechartDetails} = props
+
   const data = linechartDetails
 
   return (
@@ -9,7 +10,12 @@ const LineChartPie = props => {
       width={330}
       height={200}
       data={data}
-      margin={{top: 5, right: 100, left: 0, bottom: 0}}
+      margin={{
+        top: 5,
+        right: 100,
+        left: 0,
+        bottom: 0,
+      }}
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />

@@ -197,7 +197,7 @@ class Repository extends Component {
           <div className="no-repositories-container">
             <img
               src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720465281/Layer_3_kooxjj.png"
-              alt="no repositories"
+              alt="empty repositories"
               className="no-repos-img"
             />
             <h1 className="no-repos-text">No Repositories Found</h1>

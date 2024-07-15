@@ -4,17 +4,11 @@ import './index.css'
 
 const RepositoryCard = props => {
   const {repositoryDetails} = props
-  const {
-    name,
-    description,
-    languages,
-    stargazersCount,
-    forksCount,
-    owner,
-  } = repositoryDetails
+  const {name, description, languages, stargazersCount, forksCount} =
+    repositoryDetails
 
   return (
-    <Link to={`/repositories/${name}`}>
+    <Link to={`/repositories/${name}`} className="link">
       <div className="repo-item-container" data-testid="repoItem">
         <h1 className="repo-item-name">{name}</h1>
         <p className="repo-item-description">{description}</p>
@@ -22,7 +16,7 @@ const RepositoryCard = props => {
         <ul className="languages-list">
           {languages.map(eachLanguage => (
             <Languages
-              key={eachLanguage.value}
+              key={eachLanguage.values}
               languagesDetails={eachLanguage}
             />
           ))}
@@ -31,7 +25,7 @@ const RepositoryCard = props => {
         <div className="repos-count-container">
           <div className="stargazersCount-container">
             <img
-              src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720564077/Group_7500_aeudqb.png"
+              src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720893699/Star_-_16px_fqj2qn.png"
               alt="stargazers"
               className="repos-icon"
             />
@@ -40,7 +34,7 @@ const RepositoryCard = props => {
 
           <div className="stargazersCount-container">
             <img
-              src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720564077/Git_3_h8boah.png"
+              src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720893748/Git_3_1_woktbx.png"
               alt="forksCount"
               className="repos-icon"
             />

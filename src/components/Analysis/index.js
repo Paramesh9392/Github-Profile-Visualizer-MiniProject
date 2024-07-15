@@ -10,55 +10,55 @@ import RepoCommitCountPie from '../RepoCommitCountPie'
 
 import './index.css'
 
-const apiStatusConstarints = {
+const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
-  failure: 'FAILURE',
+  failure: 'Failure',
   inProgress: 'IN_PROGRESS',
 }
 
 class Analysis extends Component {
-  state = {
-    apiStatus: apiStatusConstarints.initial,
-    analysisData: {},
-  }
+  state = {analysisList: {}, apiStatus: apiStatusConstants.initial}
 
   componentDidMount() {
-    this.getAnalysisData()
+    this.getGitHubUserAnalysisDetails()
   }
 
-  getAnalysisData = async () => {
+  getGitHubUserAnalysisDetails = async () => {
     const {username} = this.props
-    this.setState({apiStatus: apiStatusConstarints.inProgress})
 
-    const apiUrl = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=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`
+    this.setState({apiStatus: apiStatusConstants.inProgress})
+
+    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=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`
     const options = {
       method: 'GET',
     }
 
-    const response = await fetch(apiUrl, options)
+    const response = await fetch(url, options)
+
     if (response.ok === true) {
       const data = await response.json()
       const updatedData = data
-
+      console.log(updatedData)
       this.setState({
-        apiStatus: apiStatusConstarints.success,
-        analysisData: updatedData,
+        analysisList: updatedData,
+        apiStatus: apiStatusConstants.success,
       })
     } else {
-      this.setState({apiStatus: apiStatusConstarints.failure})
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 
-  renderSuccessView = () => {
-    const {analysisData} = this.state
-    const analysisDataLength = Object.keys(analysisData).length
+  renderAnalysisSuccessView = () => {
+    const {analysisList} = this.state
+    const analysisListLength = Object.keys(analysisList).length === 0
     const {
+      user,
       quarterCommitCount,
       langRepoCount,
       langCommitCount,
       repoCommitCount,
-    } = analysisData
+    } = analysisList
 
     const quarterCommitData = []
     const quarterCommitKeyNames = Object.keys(quarterCommitCount)
@@ -99,105 +99,114 @@ class Analysis extends Component {
     const slicedData = repoCommitData.sort(this.descendingSort).slice(0, 10)
 
     return (
-      <div className="analysisContainer">
-        {analysisDataLength === 0 ? (
-          <div className="no-repositories-container">
+      <div className="AnalysisSuccessViewContainer">
+        {analysisListLength ? (
+          <div className="noDataRepoAnalysisContainer">
             <img
-              src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720465281/Layer_3_kooxjj.png"
-              alt="no repositories"
-              className="no-repos-img"
+              src="https://res.cloudinary.com/ddsn9feta/image/upload/v1719653254/Layer_3_1_jxjnnu.png"
+              alt="no analysis"
+              className="no-data-image"
             />
-            <h1 className="no-repos-text">No Analysis Found!</h1>
+            <h1 className="noDataHeading">No Analysis Found!</h1>
           </div>
         ) : (
-          <div>
-            <div className="analysis-linechart-container">
-              <LineChartPie linechartDetails={quarterCommitData} />
+          <>
+            <div className="linearChartContainer">
+              <div>
+                <LineChartPie linechartDetails={quarterCommitSlicedData} />
+              </div>
             </div>
-
-            <div className="pie-languages-reposCount-container">
-              <h1 className="pie-heading">Language Per Repos</h1>
-              <LaunguagesReposPie
-                languagesReposPieDetails={langRepoSlicedData}
-              />
+            <div className="langRepoCommitCountContainer">
+              <div className="pielanguageCountContainer">
+                <h1 className="pieLangCountHeadingRep">Language Per Repos</h1>
+                <LaunguagesReposPie
+                  languagesReposPieDetails={langRepoSlicedData}
+                />
+              </div>
+              <div className="pielCommitanguageCountContainer">
+                <h1 className="pieLangCountHeading">Language Per Commits</h1>
+                <LanguagesCommitCountPie
+                  pieCommitCountDetails={langCommitSlicedData}
+                />
+              </div>
             </div>
-
-            <div className="pie-languages-commitCount-container">
-              <h1 className="pie-heading">Language per Commits</h1>
-              <LanguagesCommitCountPie
-                pieCommitCountDetails={langCommitSlicedData}
-              />
+            <div className="repoCommitDescContainer">
+              <div className="repoCommitContainer">
+                <h1 className="repoCommitHeading">Commits Per Repo (Top 10)</h1>
+                <RepoCommitCountPie repoCommitCountDetails={slicedData} />
+              </div>
             </div>
-
-            <div className="commits-per-repo-container">
-              <h1 className="pie-heading">Commits Per Repo (Top 10)</h1>
-              <RepoCommitCountPie repoCommitCountDetails={slicedData} />
-            </div>
-          </div>
+          </>
         )}
       </div>
     )
   }
 
-  renderLoaderView = () => (
-    <div className="home-result-container" data-testid="loader">
-      <Loader type="TailSpin" color="#3B82F6" height={50} width={50} />
-    </div>
-  )
+  onClickTryAgain = () => {
+    this.getGitHubUserAnalysisDetails()
+  }
 
   renderFailureView = () => (
-    <div className="home-result-container">
+    <div className="analysisFailureContainer">
       <img
-        src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720465281/Frame_8830_1_odarmz.png"
-        alt="github failure view"
-        className="home-img"
+        src="https://res.cloudinary.com/ddsn9feta/image/upload/v1718604995/Group_7522_f4ueqy.png"
+        alt="failure view"
+        className="error-view"
       />
-      <h1 className="heading">Something went wrong. Please try again</h1>
+      <p className="errorName">Something went wrong. Please try again</p>
       <button
-        className="retry-button"
-        onClick={this.getRepositoriesData}
+        className="tryButton"
         type="button"
+        onClick={this.onClickTryAgain}
       >
-        Retry
+        Try again
       </button>
     </div>
   )
 
-  renderNoDataFoundView = () => (
-    <div className="no-data-container">
-      <img
-        src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720465281/Group_7519_tmwxdh.png"
-        alt="no data found"
-        className="no-data-img"
-      />
-      <h1 className="no-data-heading">PAGE NOT FOUND</h1>
-      <p className="no-data-text">
-        {' '}
-        We're sorry, the page you requested could not be found Please go back to
-        the homepage
-      </p>
-      <Link to="/">
-        <button className="go-to-Home-button" type="button">
-          Go To Home
-        </button>
-      </Link>
+  renderLoaderView = () => (
+    <div className="analysis-loader-container" data-testid="loader">
+      <Loader type="TailSpin" color="#3B82F6" height={50} width={50} />
     </div>
   )
 
-  renderFinalOutputView = () => {
+  renderGitAnalysisDetails = () => {
     const {apiStatus} = this.state
 
     switch (apiStatus) {
-      case apiStatusConstarints.inProgress:
-        return this.renderLoaderView()
-      case apiStatusConstarints.failure:
+      case apiStatusConstants.success:
+        return this.renderAnalysisSuccessView()
+      case apiStatusConstants.failure:
         return this.renderFailureView()
-      case apiStatusConstarints.success:
-        return this.renderSuccessView()
+      case apiStatusConstants.inProgress:
+        return this.renderLoaderView()
       default:
         return null
     }
   }
+
+  renderNoDataFound = () => (
+    <div className="noDataFoundContainer">
+      <img
+        src="https://res.cloudinary.com/ddsn9feta/image/upload/v1718949987/Repository-NoDataFound-2x_dzw1h2.png"
+        alt="empty repositories"
+        className="analysis-no-data-img"
+      />
+      <h1 className="analysis-no-data-heading">No Data Found</h1>
+      <p className="analysis-no-data-desc">
+        GitHub Username is empty, please provide a valid username for Analysis.
+      </p>
+      <Link to="/">
+        <button
+          type="button"
+          className="goto-home-button"
+          onClick={this.onClickGotoHome}
+        >
+          Go to Home
+        </button>
+      </Link>
+    </div>
+  )
 
   render() {
     const {username} = this.props
@@ -205,13 +214,13 @@ class Analysis extends Component {
     return (
       <>
         <Header />
-        <div className="analysis-app-container">
+        <div className="analysisContainer">
           {username === '' ? (
-            this.renderNoDataFoundView()
+            this.renderNoDataFound()
           ) : (
-            <div className="analysis-success-view-container">
-              <h1 className="repos-heading">Analysis</h1>
-              {this.renderFinalOutputView()}
+            <div className="testcaseContainer">
+              <h1 className="analysisTestHeading">Analysis</h1>
+              {this.renderGitAnalysisDetails()}
             </div>
           )}
         </div>
@@ -219,5 +228,4 @@ class Analysis extends Component {
     )
   }
 }
-
 export default Analysis

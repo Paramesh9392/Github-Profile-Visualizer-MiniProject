@@ -44,5 +44,4 @@ const LaunguagesReposPie = props => {
     </ResponsiveContainer>
   )
 }
-
 export default LaunguagesReposPie

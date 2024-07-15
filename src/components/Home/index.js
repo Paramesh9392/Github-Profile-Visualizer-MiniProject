@@ -90,7 +90,7 @@ class Home extends Component {
     <div className="home-result-container">
       <img
         src="https://res.cloudinary.com/ddbzrs61m/image/upload/v1720465281/Frame_8830_j8hzju.png"
-        alt="github profile visulaizer"
+        alt="gitHub profile visualizer home page"
         className="home-img"
       />
     </div>
