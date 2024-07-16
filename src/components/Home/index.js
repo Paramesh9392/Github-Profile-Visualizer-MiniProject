@@ -41,7 +41,7 @@ class Home extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const GitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=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`
+    const GitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?` //api_key="github personal access"
     const options = {
       method: 'GET',
     }
@@ -350,7 +350,7 @@ class Home extends Component {
     const {username} = this.props
     this.setState({apiStatus: apiStatusConstarints.inProgress})
 
-    const apiUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=` // personal access token should be place here
+    const apiUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?` // personal access token should be place here
     const options = {
       method: 'GET',
     }

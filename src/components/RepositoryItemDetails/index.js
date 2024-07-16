@@ -74,7 +74,7 @@ class RepositoryItemDetails extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${repoName}?api_key=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`
+    const url = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${repoName}?` //api_key="github personal access"
     const options = {
       method: 'GET',
     }
@@ -324,7 +324,7 @@ class RepositoryItemDetails extends Component {
     this.setState({apiStatus: apiStatusConstarints.inProgress})
     console.log(repoName)
 
-    const apiUrl = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${repoName}?api_key=` // personal access token should be place here
+    const apiUrl = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${repoName}?` // personal access token should be place here
     const options = {
       method: 'GET',
     }
