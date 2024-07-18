@@ -106,140 +106,23 @@
   text-align: left;
   color: #f8fafc;
 }
-
-/*
-.repositoriesContainer {
-  background-color: #0f172a;
-  width: 100vw;
+.back-button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 45px;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-right: 300px;
 }
-.repo-eachItem-container {
-  background-color: #132240;
-  width: 90%;
-  border-radius: 10px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.back-button {
+  height: 35px;
+  width: 75px;
   font-family: 'Roboto';
-  text-align: left;
-  align-self: flex-start;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  background-color: #ccf732;
+  color: #000000;
 }
-.repo-color-name {
-  font-size: 30px;
-  color: #3b82f6;
-  font-weight: 650;
-}
-.description-text {
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 450;
-  text-align: left;
-}
-.text {
-  font-size: 17px;
-  color: #ffffff;
-  font-weight: 400;
-}
-.languages-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 20px;
-}
-.repo-forks-stars-count-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 20px;
-}
-.repos-forks-stars-count {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 15px;
-}
-.stars-img {
-  height: 20px;
-  width: 20px;
-  margin-right: 6px;
-}
-.forks-text {
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: 450;
-}
-.commits-issues-count-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 20px;
-}
-.commits-issues-count {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 7px;
-  border: 1px solid #ffffff;
-  margin-right: 15px;
-  padding: 8px;
-  text-align: center;
-  height: 70px;
-  width: 200px;
-}
-.commits-text {
-  font-size: 17px;
-  color: #ffffff;
-  font-weight: 450;
-  text-align: center;
-}
-.contributors-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-.contributors-count {
-  font-size: 17px;
-  color: #ffffff;
-  font-weight: 400;
-  margin-right: 10px;
-  padding-right: 8px;
-}
-contributors-count-text {
-  font-size: 17px;
-  color: #ffffff;
-  font-weight: 400;
-}
-.text-heading {
-  font-size: 27px;
-  color: #ffffff;
-  font-weight: 550;
-  margin-bottom: 18px;
-}
-.count-text {
-  font-size: 16px;
-  color: #ffffffe7;
-  font-weight: 450;
-  text-align: center;
-  margin-top: 5px;
-}
-.contributor-images-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.pie-chart-container {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.pie-container {
-  display: flex;
-  justify-content: left;
-}
-*/
