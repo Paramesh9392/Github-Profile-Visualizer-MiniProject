@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 90vh;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   background: #0f172a;
 }
 .bio {
@@ -43,7 +43,7 @@
   padding: 10px 12px 10px 12px;
   gap: 10px;
   border-radius: 0px 4px 4px 0px;
-  opacity: 0px;
+  opacity: 1px;
   background: #4f4e4c;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@
   height: 20px;
   padding: 1.33px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   color: #ffffff;
   font-size: 30px;
 }
@@ -94,7 +94,7 @@
   padding-top: 30px;
   padding-left: 30px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 
 .failureInputContainer {

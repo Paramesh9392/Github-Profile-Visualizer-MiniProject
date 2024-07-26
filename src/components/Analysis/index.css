@@ -1,6 +1,8 @@
-.analysisContainer {
+.analysisMainContainer {
   min-height: 90vh;
   background-color: #0f172a;
+  display: flex;
+  justify-content: center;
 }
 .testcaseContainer {
   width: 100%;
@@ -12,7 +14,7 @@
   font-size: 25px;
   color: #ffffff;
   font-weight: 500;
-  padding-left: 30px;
+  padding-left: 0px;
 }
 
 @media screen and (min-width: 768px) {
@@ -87,10 +89,6 @@
   justify-content: center;
   align-items: flex-start;
 }
-/* .linearChartContainer {
-  width: 100%;
-}
- */
 @media screen and (min-width: 768px) {
   .analysis-no-data-img {
     height: 300px;
@@ -108,8 +106,11 @@
 
 .AnalysisSuccessViewContainer {
   min-height: 90vh;
-  width: 100%;
   padding: 30px;
+  background-color: #ffffff0f;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 768px) {
@@ -123,9 +124,15 @@
 
 .linearChartContainer {
   width: 100%;
+  height: 30vh;
   background-color: #132240;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.linePieChartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -207,7 +214,6 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 40px;
-    /*  margin-left: 100px; */
   }
 }
 

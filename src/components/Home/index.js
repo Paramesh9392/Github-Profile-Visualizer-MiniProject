@@ -40,7 +40,7 @@ class Home extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const GitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?` //Use github Personal access token here as parameter
+    const GitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=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`
     const options = {
       method: 'GET',
     }
@@ -103,6 +103,12 @@ class Home extends Component {
     } else {
       this.getGitHubUserProfileDetails()
       this.setState({isError: false, errorMsg: ''})
+    }
+  }
+
+  keyDown = event => {
+    if (event.key === 'Enter') {
+      this.onClickSearch()
     }
   }
 
@@ -242,6 +248,7 @@ class Home extends Component {
                     type="text"
                     value={username}
                     onChange={onChangeUserName}
+                    onKeyDown={this.keyDown}
                     placeholder="Enter github username"
                     className="input-search-style"
                   />

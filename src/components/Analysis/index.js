@@ -30,12 +30,10 @@ class Analysis extends Component {
     this.getGitHubUserAnalysisDetails()
   }
 
-  getGitHubUserAnalysisDetails = async () => {
-    const {username} = this.props
-
+  getGitHubUserAnalysisDetails = async username => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?` //Use github Personal access token here as parameter
+    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=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`
     const options = {
       method: 'GET',
     }
@@ -59,13 +57,11 @@ class Analysis extends Component {
     const {analysisList} = this.state
     const analysisListLength = Object.keys(analysisList).length === 0
     const {
-      user,
       quarterCommitCount,
       langRepoCount,
       langCommitCount,
       repoCommitCount,
     } = analysisList
-    const {login} = user
 
     const quarterCommitData = []
     const quarterCommitKeyNames = Object.keys(quarterCommitCount)
@@ -118,11 +114,8 @@ class Analysis extends Component {
           </div>
         ) : (
           <>
-            <div className="analysisHeadingContainer">
-              <h1 className="analysis">{login}</h1>
-            </div>
             <div className="linearChartContainer">
-              <div>
+              <div className="linePieChartContainer">
                 <LineChartPie quarterCommitCount={quarterCommitSlicedData} />
               </div>
             </div>
@@ -222,13 +215,13 @@ class Analysis extends Component {
     return (
       <>
         <Header />
-        <div className="analysisContainer">
+        <div className="analysisMainContainer">
           {username === '' ? (
             this.renderNoDataFound()
           ) : (
             <div className="testcaseContainer">
               <h1 className="analysisTestHeading">Analysis</h1>
-              {this.renderGitAnalysisDetails()}
+              {this.renderGitAnalysisDetails(username)}
             </div>
           )}
         </div>
