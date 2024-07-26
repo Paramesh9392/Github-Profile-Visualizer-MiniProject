@@ -731,3 +731,8 @@ If you complete the main features of the project you can try out the below featu
 > - All components you implement should go in the `src/components` directory.
 > - **Do not remove the pre-filled code**
 > - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+
+
+ssh-keygen -t rsa -b 4096 -C "parameshduapm9652@gmail.com"
+xclip -sel clip < ~/.ssh/paramesh9392.pub
+git remote set-url origin git@github.com:Paramesh9392/github-profile-visulaizer.git
