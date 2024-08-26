@@ -10,10 +10,6 @@ import RepositoryCard from '../RepositoryCard'
 
 import './index.css'
 
-require('dotenv').config()
-
-const apiKey = process.env.API_KEY
-
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -62,7 +58,7 @@ class Repository extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/repos/${username}?api_key=${apiKey}`
+    const url = `https://apis2.ccbp.in/gpv/repos/${username}?api_key=` // access_token
     const options = {
       method: 'GET',
     }

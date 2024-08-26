@@ -16,10 +16,6 @@ import Header from '../Header'
 
 import './index.css'
 
-require('dotenv').config()
-
-const apiKey = process.env.API_KEY
-
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -44,7 +40,7 @@ class Home extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const GitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=${apiKey}`
+    const GitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=` // access_token
     const options = {
       method: 'GET',
     }

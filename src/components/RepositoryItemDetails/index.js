@@ -12,10 +12,6 @@ import Piechart from '../Piechart'
 
 import './index.css'
 
-require('dotenv').config()
-
-const apiKey = process.env.API_KEY
-
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -78,7 +74,7 @@ class RepositoryItemDetails extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${id}?api_key=${apiKey}`
+    const url = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${id}?api_key=` // access_token
     const options = {
       method: 'GET',
     }
