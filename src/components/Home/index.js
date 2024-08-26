@@ -136,6 +136,7 @@ class Home extends Component {
           <img src={avatarUrl} alt={name} className="avatar-url" />
           <p className="login">{login}</p>
           <h1 className="name">{name}</h1>
+          <p className="name">BIO</p>
           <p className="bio">{bio}</p>
           <p className="bio">{blog}</p>
           <div className="followers-following-public-container">
@@ -245,7 +246,7 @@ class Home extends Component {
               <div className="home-container">
                 <div className="input-container">
                   <input
-                    type="text"
+                    type="search"
                     value={username}
                     onChange={onChangeUserName}
                     onKeyDown={this.keyDown}
