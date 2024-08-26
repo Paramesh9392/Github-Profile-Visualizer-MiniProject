@@ -16,6 +16,10 @@ import RepoCommitCountPie from '../RepoCommitCountPie'
 
 import './index.css'
 
+require('dotenv').config()
+
+const apiKey = process.env.API_KEY
+
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -33,7 +37,7 @@ class Analysis extends Component {
   getGitHubUserAnalysisDetails = async username => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=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`
+    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=${apiKey}`
     const options = {
       method: 'GET',
     }
