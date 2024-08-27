@@ -27,13 +27,18 @@ class Analysis extends Component {
   state = {analysisList: {}, apiStatus: apiStatusConstants.initial}
 
   componentDidMount() {
-    this.getGitHubUserAnalysisDetails()
+    const {username} = this.props
+    if (username === '') {
+      this.renderNoDataFound()
+    } else {
+      this.getGitHubUserAnalysisDetails(username)
+    }
   }
 
   getGitHubUserAnalysisDetails = async username => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=` // access_token
+    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=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` // access_token
     const options = {
       method: 'GET',
     }
