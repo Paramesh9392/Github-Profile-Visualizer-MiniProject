@@ -40,7 +40,7 @@ class Home extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const GitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=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` // access_token
+    const GitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?` // access_token
     const options = {
       method: 'GET',
     }
