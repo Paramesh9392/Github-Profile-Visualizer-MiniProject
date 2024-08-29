@@ -74,7 +74,7 @@ class RepositoryItemDetails extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${id}?api_key=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` // access_token
+    const url = `` // access_token
     const options = {
       method: 'GET',
     }
