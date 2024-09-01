@@ -40,11 +40,11 @@ class Home extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const GitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=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` // access_token
+    const gitHubUserProfileUrl = `https://apis2.ccbp.in/gpv/profile-details/${username}?api_key=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` // access_token
     const options = {
       method: 'GET',
     }
-    const response = await fetch(GitHubUserProfileUrl, options)
+    const response = await fetch(gitHubUserProfileUrl, options)
 
     if (response.ok === true) {
       const data = await response.json()
@@ -131,7 +131,7 @@ class Home extends Component {
     } = object
 
     return (
-      <div data-testid="repoItem" className="repo-item">
+      <div testid="repoItem" className="repo-item">
         <div className="profileDetailsContainer">
           <img src={avatarUrl} alt={name} className="avatar-url" />
           <p className="login">{login}</p>
@@ -209,7 +209,7 @@ class Home extends Component {
   )
 
   renderLoaderView = () => (
-    <div className="loader-container" data-testid="loader">
+    <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#3B82F6" height={50} width={50} />
     </div>
   )
@@ -258,7 +258,7 @@ class Home extends Component {
                       type="button"
                       onClick={this.onClickSearch}
                       className="search-button"
-                      data-testid="searchButton"
+                      testid="searchButton"
                     >
                       .<HiOutlineSearch className="search-icon" />
                     </button>
