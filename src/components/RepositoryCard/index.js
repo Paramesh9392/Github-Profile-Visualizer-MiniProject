@@ -14,8 +14,8 @@ const RepositoryCard = props => {
 
   return (
     <Link to={`/repositories/${name}`} className="repoLinkContainer">
-      <div data-testid="repoItem" className="repo-item">
-        <div className="repositoryItemContainer" data-testid="repoItem">
+      <div testid="repoItem" className="repo-item">
+        <div className="repositoryItemContainer" testid="repoItem">
           <div className="repoHeaderContainer">
             <h1 className="repoItemHeading">{name}</h1>
           </div>
