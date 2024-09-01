@@ -74,7 +74,7 @@ class RepositoryItemDetails extends Component {
 
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${id}?api_key=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` // access_token
+    const url = `https://apis2.ccbp.in/gpv/specific-repo/${username}/${id}?api_key=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` // access_token
     const options = {
       method: 'GET',
     }
@@ -143,7 +143,7 @@ class RepositoryItemDetails extends Component {
 
     return (
       <>
-        <div data-testid="repoItem" className="repo-item">
+        <div testid="repoItem" className="repo-item">
           <div className="repoItemDetailsContainer">
             <div className="repositoryItemContainer1">
               <div className="repoHeaderContainer">
@@ -240,7 +240,7 @@ class RepositoryItemDetails extends Component {
   )
 
   renderLoaderView = () => (
-    <div className="repository-loader-container" data-testid="loader">
+    <div className="repository-loader-container" testid="loader">
       <Loader type="TailSpin" color="#3B82F6" height={50} width={50} />
     </div>
   )
