@@ -17,7 +17,7 @@ class Header extends Component {
 
     return (
       <div className="container">
-        <div data-testid="header" className="repo-item">
+        <div testid="header" className="repo-item">
           <nav className="header-container">
             <Link to="/" className="heading-nav-link">
               <h1 className="header-heading">GitHub Profile Visualizer</h1>
