@@ -38,7 +38,7 @@ class Analysis extends Component {
   getGitHubUserAnalysisDetails = async username => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
 
-    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=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` // access_token
+    const url = `https://apis2.ccbp.in/gpv/profile-summary/${username}?api_key=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` // access_token
     const options = {
       method: 'GET',
     }
@@ -171,7 +171,7 @@ class Analysis extends Component {
   )
 
   renderLoaderView = () => (
-    <div className="analysis-loader-container" data-testid="loader">
+    <div className="analysis-loader-container" testid="loader">
       <Loader type="TailSpin" color="#3B82F6" height={50} width={50} />
     </div>
   )
